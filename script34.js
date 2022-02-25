@@ -92,6 +92,8 @@
 // 	case noise === SILENT_ROOM:
 // 		alert('Тихая комната');
 // 		break;
+
+
 // 	case noise > JACKHAMMER:
 // 		alert('Звук слишком высокий');
 // 		break;
@@ -160,19 +162,138 @@
 
 // 5. Разработайте программу, принимающую на вход дату и выводящую на экран дату, следующую за ней. Например, если пользователь введет дату, соответствующую 18 ноября 2019 года, на экран должен быть выведен следующий день, то есть 19 ноября 2019 года. Если входная дата будет представлять 30 ноября, то на выходе мы должны получить 1 декабря. И наконец, если ввести последний день года – 31 декабря 2019-го, пользователь должен увидеть на экране дату 1 января 2020-го. Дату пользователь должен вводить в три этапа: год, месяц и день. Убедитесь, что ваша программа корректно обрабатывает високосные годы.
 
-let year = +prompt('Введите год');
-let month = +prompt('Введите месяц');
-let day = +prompt('Введите день');
+let userYear = +prompt('Введите год');
+let userMonth = prompt('Введите месяц');
+let userDay = +prompt('Введите день');
 
-switch (month) {
-	case 1:
-		if (day < 31) {
-			day++;
+userMonth = userMonth.toLowerCase();
+
+
+let outputDate;
+let outputMonth;
+let outputYear = userYear;
+
+switch (userMonth) {
+	case "январь":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "февраль";
 		} else {
-			day = 1;
-			month++;
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
 		}
 		break;
-	case 2:
-		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-			
+
+	case "февраль":
+		if (userYear % 4 === 0 && userDay === 28) {
+			outputDate = 1;
+			outputMonth = "март";
+		} else if (userYear % 4 !== 0 && userDay === 29) {
+			outputDate = 1;
+			outputMonth = "март";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "март":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "апрель";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "апрель":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "май";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "май":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "июнь";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "июнь":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "июль";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "июль":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "август";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "август":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "сентябрь";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "сентябрь":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "октябрь";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "октябрь":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "ноябрь";
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	case "декабрь":
+		if (userDay === 31) {
+			outputDate = 1;
+			outputMonth = "январь";
+			outputYear = userYear + 1;
+		} else {
+			outputDate = userDay + 1;
+			outputMonth = userMonth;
+		}
+		break;
+
+	default:
+		outputDate = userDay + 1;
+		outputMonth = userMonth;
+		break;
+}
+
+let message = `Следующая дата: ${outputDate} ${outputMonth} ${outputYear}`;
+
+document.write(message);
