@@ -47,6 +47,7 @@ if (oddEven % 2 === 0) {
 // Компьютер: это зима
 
 let month = prompt("Введите название месяца");
+month = month.toLowerCase();
 
 if (month === "декабрь" || month === "январь" || month === "февраль") {
 	document.write("Это зима");
