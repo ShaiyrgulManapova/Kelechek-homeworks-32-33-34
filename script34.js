@@ -2,62 +2,59 @@
 
 // 1. Разработайте программу, запрашивающую у пользователя букву латинского алфавита. Если введенная буква входит в следующий список (a, e, i, o или u), необходимо вывести сообщение о том, что эта буква гласная. Если была введена буква **y**, программа должна написать, что эта буква может быть как гласной, так и согласной. Во всех других случаях должно выводиться сообщение о том, что введена согласная буква.
 
-// let randomLetter = prompt('Введите букву латинского алфавита');
+let randomLetter = prompt('Введите букву латинского алфавита');
 
-// switch (randomLetter) {
-// 	case 'a':
-// 	case 'e':
-// 	case 'i':
-// 	case 'o':
-// 	case 'u':
-// 		alert('Эта буква гласная');
-// 		break;
-// 	case 'y':
-// 		alert('Эта буква может быть как гласной, так и согласной');
-// 		break;
-// 	default: 
-// 		alert('Эта буква согласная');
-// }
-
-
+switch (randomLetter) {
+	case 'a':
+	case 'e':
+	case 'i':
+	case 'o':
+	case 'u':
+		alert('Эта буква гласная');
+		break;
+	case 'y':
+		alert('Эта буква может быть как гласной, так и согласной');
+		break;
+	default: 
+		alert('Эта буква согласная');
+}
 
 
 
 // 2. Напишите программу, запрашивающую у пользователя три целых числа и выводящую их в упорядоченном виде – по возрастанию.
 
-// let firstNumber = +prompt('Введите первое число');
-// let secondNumber = +prompt('Введите второе число');
-// let thirdNumber = +prompt('Введите третье число');
+let firstNumber = +prompt('Введите первое число');
+let secondNumber = +prompt('Введите второе число');
+let thirdNumber = +prompt('Введите третье число');
 
-// switch (true) {
-// 	case firstNumber < secondNumber && firstNumber < thirdNumber:
-// 		alert(firstNumber);
-// 			case secondNumber < thirdNumber:
-// 				alert(secondNumber);
-// 				alert(thirdNumber);
-// 				document.write(firstNumber + ' ' + secondNumber + ' ' + thirdNumber);
-// 		break;
+switch (true) {
+	case firstNumber < secondNumber && firstNumber < thirdNumber:
+		alert(firstNumber);
+			case secondNumber < thirdNumber:
+				alert(secondNumber);
+				alert(thirdNumber);
+				document.write(firstNumber + ' ' + secondNumber + ' ' + thirdNumber);
+		break;
 
-// 	case secondNumber < firstNumber && secondNumber < thirdNumber:
-// 		alert(secondNumber);
-// 			case firstNumber < thirdNumber:
-// 				alert(firstNumber);
-// 				alert(thirdNumber);
-// 				document.write( secondNumber + ' ' + firstNumber + ' ' + thirdNumber);
-// 		break;
+	case secondNumber < firstNumber && secondNumber < thirdNumber:
+		alert(secondNumber);
+			case firstNumber < thirdNumber:
+				alert(firstNumber);
+				alert(thirdNumber);
+				document.write( secondNumber + ' ' + firstNumber + ' ' + thirdNumber);
+		break;
 
-// 	case thirdNumber < firstNumber && thirdNumber < secondNumber:
-// 		alert(thirdNumber);
-// 			case firstNumber < secondNumber:
-// 				alert(firstNumber);
-// 				alert(secondNumber);
-// 				document.write( thirdNumber + ' ' + firstNumber + ' ' + secondNumber);
-// 		break;
+	case thirdNumber < firstNumber && thirdNumber < secondNumber:
+		alert(thirdNumber);
+			case firstNumber < secondNumber:
+				alert(firstNumber);
+				alert(secondNumber);
+				document.write( thirdNumber + ' ' + firstNumber + ' ' + secondNumber);
+		break;
 
-// 	default:
-// 		alert('Числа не отсортированы');
-// }
-
+	default:
+		alert('Числа не отсортированы');
+}
 
 
 
@@ -72,46 +69,46 @@
 
 // Создайте программу, в которой пользователь будет вводить уровень шума в децибелах. Если введенное им значение будет в точности совпадать с одним из значений в приведенной таблице, необходимо вывести, чему соответствует указанный уровень громкости. Если значение попадет между уровнями в таблице, нужно сообщить, между какими именно. Также программа должна выдавать корректные сообщения, в случае если введенное пользователем значение окажется ниже минимального или больше максимального.
 
-// const JACKHAMMER = 130;
-// const GAS_PIPE = 106;
-// const ALARM = 70;
-// const SILENT_ROOM = 40;
+const JACKHAMMER = 130;
+const GAS_PIPE = 106;
+const ALARM = 70;
+const SILENT_ROOM = 40;
 
-// let noise = +prompt('Введите уровень шума в децибелах');
+let noise = +prompt('Введите уровень шума в децибелах');
 
-// switch (true) {
-// 	case noise === JACKHAMMER:
-// 		alert('Отбойный молоток');
-// 		break;
-// 	case noise === GAS_PIPE:
-// 		alert('Газовая газонокосилка');
-// 		break;
-// 	case noise === ALARM:
-// 		alert('Будильник');
-// 		break;
-// 	case noise === SILENT_ROOM:
-// 		alert('Тихая комната');
-// 		break;
+switch (true) {
+	case noise === JACKHAMMER:
+		alert('Отбойный молоток');
+		break;
+	case noise === GAS_PIPE:
+		alert('Газовая газонокосилка');
+		break;
+	case noise === ALARM:
+		alert('Будильник');
+		break;
+	case noise === SILENT_ROOM:
+		alert('Тихая комната');
+		break;
 
 
-// 	case noise > JACKHAMMER:
-// 		alert('Звук слишком высокий');
-// 		break;
-// 	case noise < JACKHAMMER && noise > GAS_PIPE:
-// 		alert('Звук в диапазоне от газовой газонокосилки до отбойного молотка');
-// 		break;
-// 	case noise < GAS_PIPE && noise > ALARM:
-// 		alert('Звук в диапазоне от будильника до газовой газонокосилки');
-// 		break;
-// 	case noise < ALARM && noise > SILENT_ROOM:
-// 		alert('Звук в диапазоне от тихой комнаты до будильника');
-// 		break;
-// 	case noise < SILENT_ROOM:
-// 		alert('Звук слишком низкий');
-// 		break;
-// 	default:
-// 		alert('Введенное значение не соответствует ни одному из значений в таблице');
-// }
+	case noise > JACKHAMMER:
+		alert('Звук слишком высокий');
+		break;
+	case noise < JACKHAMMER && noise > GAS_PIPE:
+		alert('Звук в диапазоне от газовой газонокосилки до отбойного молотка');
+		break;
+	case noise < GAS_PIPE && noise > ALARM:
+		alert('Звук в диапазоне от будильника до газовой газонокосилки');
+		break;
+	case noise < ALARM && noise > SILENT_ROOM:
+		alert('Звук в диапазоне от тихой комнаты до будильника');
+		break;
+	case noise < SILENT_ROOM:
+		alert('Звук слишком низкий');
+		break;
+	default:
+		alert('Введенное значение не соответствует ни одному из значений в таблице');
+}
 
 
 
@@ -125,35 +122,34 @@
 // Улисс Грант - $50.00
 // Бенджамин Франклин - $100.00
 
-// let nominal = +prompt('Введите номинал банкноты');
-// nominal = nominal.toFixed(2);
-// nominal = nominal.replace(',', '.');
+let nominal = +prompt('Введите номинал банкноты');
+nominal = nominal.toFixed(2);
 
-// switch (nominal) {
-// 	case '1.00':
-// 		alert('Джордж Вашингтон');
-// 		break;
-// 	case '2.00':
-// 		alert('Томас Джефферсон');
-// 		break;
-// 	case '5.00':
-// 		alert('Авраам Линкольн');
-// 		break;
-// 	case '10.00':
-// 		alert('Александр Гамильтон');
-// 		break;
-// 	case '20.00':
-// 		alert('Эндрю Джексон');
-// 		break;
-// 	case '50.00':
-// 		alert('Улисс Грант');
-// 		break;
-// 	case '100.00':
-// 		alert('Бенджамин Франклин');
-// 		break;
-// 	default:
-// 		alert('Номинал не существует');
-// }
+switch (nominal) {
+	case '1.00':
+		alert('Джордж Вашингтон');
+		break;
+	case '2.00':
+		alert('Томас Джефферсон');
+		break;
+	case '5.00':
+		alert('Авраам Линкольн');
+		break;
+	case '10.00':
+		alert('Александр Гамильтон');
+		break;
+	case '20.00':
+		alert('Эндрю Джексон');
+		break;
+	case '50.00':
+		alert('Улисс Грант');
+		break;
+	case '100.00':
+		alert('Бенджамин Франклин');
+		break;
+	default:
+		alert('Номинал не существует');
+}
 
 
 
